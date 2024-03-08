@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="public/styles/style.scss" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tele2 - это ваша выгода</title>
+  </head>
+  <body>
+    <header class="header">
+      <img class="header__logo" src="img/t2Logo.svg" alt="логотип" />
+      <button class="header__location-button">
+        <img
+          class="header__location-icon"
+          src="img/Location.png"
+          alt="значок геолокации"
+        />
+        <span class="header__location-city">Москва</span>
+      </button>
+    </header>
+    <section class="section section-promo">
+      <div class="section-promo__text">
+        <p class="p section-promo__subtitle">
+          Акция продлится с 1 по 20 сентября
+        </p>
+        <h2 class="h2 section-promo__title">
+          это ваша <span class="section-promo__title--span-color">выгода!</span>
+        </h2>
+        <p class="p section-promo__descr">
+          Тариф &laquo;Мой онлайн+&raquo; и 1 ТБ трафика в подарок для новых
+          абонентов
+        </p>
+        <button class="section-promo__button all-buttons">
+          Принять участие
+        </button>
+      </div>
+      <img class="section-promo__ambassador-img" src="img/Boss1 2.png" alt="" />
+    </section>
+    <section class="section section-conditions">
+      <h3 class="all-h3 section-conditions__title">
+        Один терабайт — много любимых развлечений
+      </h3>
+      <p class="section-conditions__desc p">
+        Подарок получают только новые абоненты при подключении услуг Tele2
+        с&nbsp;тарифом &laquo;Мой онлайн+&raquo;. Трафик расходуется
+        в&nbsp;течение года.
+      </p>
+      <div class="section-conditions__all-conditions">
+        <div class="section-conditions__one-condition">
+          <img src="img/Group 656.svg" alt="" class="section-conditions__img" />
+          <p class="p section-conditions__p">Около 500 часов видео</p>
+        </div>
+        <div class="section-conditions__one-condition">
+          <img src="img/Group 655.png" alt="" class="section-conditions__img" />
+          <p class="p section-conditions__p">Примерно 200 000 песен</p>
+        </div>
+        <div class="section-conditions__one-condition">
+          <img src="img/Group 657.png" alt="" class="section-conditions__img" />
+          <p class="p section-conditions__p">Порядка 300 000 фото</p>
+        </div>
+      </div>
+    </section>
+    <section class="section section-number">
+      <div class="section-number__formArea">
+        <h3 class="section-number__title-desktop">Несколько шагов</h3>
+        <span class="highlight-desktop"> и 1 ТБ - ваш</span>
+
+        <h3 class="all-h3 section-number__title-mobile">
+          Оставь номер <br />
+          <span class="highlight"> и 1 ТБ - ваш</span>
+        </h3>
+        <form class="section-number__form" action="/" method="post">
+          <label for="number"> Номер телефона </label>
+          <input
+            pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+            type="tel"
+            minlength="11"
+            maxlength="11"
+            id="number"
+            placeholder="+7 (999) 692 06 09"
+          />
+          <p>
+            <input
+              type="checkbox"
+              class="input-agreement"
+              id="agreement-check"
+            />
+            <label class="agree" for="agreement-check">
+              <a class="agree-link" href="#"
+                >Даю согласие на обработку персональных данных</a
+              >
+            </label>
+          </p>
+          <input class="all-buttons" type="submit" placeholder="Отправить" />
+        </form>
+      </div>
+      <div class="section-number__all-instructions">
+        <div class="section-number__one-instruction">
+          <p class="p instruction-number">1</p>
+          <p class="p instruction-text">
+            Ведите свой номер телефона, затем дождитесь смс с&nbsp;промокодом
+            для получения Тб
+          </p>
+        </div>
+        <div class="section-number__one-instruction">
+          <p class="p instruction-number">2</p>
+          <p class="p instruction-text">
+            Перейдите на&nbsp;<a
+              class="a-tele2"
+              href="https://tele2.ru/"
+              target="_blank"
+              >сайт Tele2</a
+            >
+            и&nbsp;активируйте промокод при подключении на&nbsp;тариф &laquo;Мой
+            Онлайн+&raquo;
+          </p>
+        </div>
+        <div class="section-number__one-instruction">
+          <p class="p instruction-number">3</p>
+          <p class="p instruction-text">
+            Используйте свой подарочный ТБ от Tele2 в&nbsp;течение&nbsp;всего
+            года
+          </p>
+        </div>
+        <form class="section-number__form-mobile" action="/" method="post">
+          <label for="number"> Номер телефона </label>
+          <input
+            pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+            type="tel"
+            minlength="11"
+            maxlength="11"
+            id="number"
+            placeholder="+7 (999) 692 06 09"
+          />
+          <p>
+            <input
+              type="checkbox"
+              class="input-agreement"
+              id="agreement-check"
+            />
+            <label class="agree" for="agreement-check">
+              <a class="agree-link" href="#"
+                >Даю согласие на обработку персональных данных</a
+              >
+            </label>
+          </p>
+          <input class="all-buttons" type="submit" placeholder="Отправить" />
+        </form>
+      </div>
+    </section>
+    <section class="section tarif-desktop">
+      <div class="tarif-desc">
+        <h3 class="all-h3">Заходите на сайт Теле2</h3>
+        <p class="p">
+          Перейдите в&nbsp;магазин на&nbsp;страничку активации, введите ваш
+          промокод. Готово! Теперь вы&nbsp;получите 1&nbsp;ТБ на&nbsp;ваш
+          телефон при подключении тарифа &laquo;Мой онлайн+&raquo;.
+        </p>
+
+        <a
+          class="all-buttons change-tarif"
+          href="https://rostov.tele2.ru"
+          target="_blank"
+          >Оофрмить тариф</a
+        >
+      </div>
+      <div class="tarif-send">
+        <img
+          class="tarif-send__img"
+          src="img/Mask Group.png"
+          alt="картинка с изображением телефоном"
+        />
+      </div>
+    </section>
+    <section class="section tarif-mobile">
+      <div class="tarif-desc">
+        <h3 class="all-h3">Заходите на сайт Теле2</h3>
+        <p class="p">
+          Перейдите в&nbsp;магазин на&nbsp;страничку активации, введите ваш
+          промокод. Готово! Теперь вы&nbsp;получите 1&nbsp;ТБ на&nbsp;ваш
+          телефон при подключении тарифа &laquo;Мой онлайн+&raquo;.
+        </p>
+      </div>
+      <div class="tarif-send">
+        <img
+          class="tarif-send__img"
+          src="img/Mask Group.png"
+          alt="картинка с изображением телефоном"
+        />
+        <button class="all-buttons">Оофрмить тариф</button>
+      </div>
+    </section>
+
+    <section class="section-socials">
+      <div class="socials-icons">
+        <img src="img/Icon_Social_Twitter.svg" alt="" class="social-icon" />
+        <img src="img/Icon_Social_VKontakte.svg" alt="" class="social-icon" />
+        <img src="img/Icon_Social_Facebook.svg" alt="" class="social-icon" />
+      </div>
+      <div class="social-usersAgreement">
+        <a class="p section-socials--p">Полные условия акции</a>
+        <img class="social-icon" src="img/Group 397.svg" alt="" />
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__company">
+        <img src="img/t2Logo.svg" alt="" class="footer__logo" />
+        <p class="p footer__p">&#169; Tele2 Россия, 2021</p>
+      </div>
+      <div class="footer__studio">
+        <p class="footer__p">Сделано в студии Олега Чулакова</p>
+        <img src="img/Logo 1.svg" alt="Чулаков" class="footer__logo" />
+      </div>
+    </footer>
+  </body>
+</html>
