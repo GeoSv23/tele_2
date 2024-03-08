@@ -1,0 +1,583 @@
+//Импортирую шрифты из файла fonts.scss
+
+@import url(/public/styles/fonts.scss);
+@import url(/public/styles/nullstyle.scss);
+
+//Создаю миксины для шрифтов
+
+@mixin p-text {
+  font-family: "Tele2 Text";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+@mixin displaySerif {
+  font-family: "Tele2 DisplaySerif";
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  font-size: 18px;
+}
+
+@mixin h2-text {
+  font-family: "Standard Stencil";
+  font-weight: 700;
+  font-style: normal;
+  line-height: 36px;
+  font-size: 36px;
+}
+
+//Оформление боди и первой секции
+
+body {
+  background-color: #1f2229;
+  @include displaySerif;
+}
+
+.all-h3 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+  font-size: 24px;
+}
+
+.all-buttons:hover {
+  color: black;
+  background-color: gray;
+}
+
+.p {
+  @include p-text;
+  line-height: 27px;
+}
+
+.header {
+  @include p-text;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #383d4a;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.header__logo {
+  width: 48px;
+  height: 18px;
+  margin-top: 13px;
+  margin-left: 16px;
+}
+
+.header__location-button {
+  @include p-text;
+  margin: 8px 14px 9px 0;
+  display: flex;
+  color: white;
+  background: none;
+  border: none;
+  align-items: center;
+}
+
+.location-icon {
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+.section {
+  display: flex;
+  max-width: 316px;
+  margin: auto;
+}
+
+.section-promo {
+  margin-bottom: 72px;
+  flex-direction: column;
+}
+
+.section-promo__text {
+  margin: auto;
+  max-width: 288px;
+}
+
+.section-promo__title {
+  @include h2-text;
+  margin: 40px 0 16px;
+  text-transform: uppercase;
+  line-height: 36px;
+  & span {
+    color: #48ccfd;
+  }
+}
+
+.all-buttons {
+  border-radius: 30px;
+  margin-top: 56px;
+  padding: 19px 44px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: black;
+  font-weight: 700;
+}
+
+.change-tarif {
+  border-radius: 30px;
+  background-color: white;
+  margin-top: 56px;
+  padding: 19px 44px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  max-width: 300px;
+  background-color: white;
+}
+
+.section-promo__ambassador-img {
+  width: 316px;
+  margin-top: 48px;
+}
+
+//Адаптив первой секции
+
+@media screen and (min-width: 1170px) {
+  .header__logo {
+    width: 88px;
+    height: 33px;
+  }
+
+  .header__location {
+    font-size: 25px;
+  }
+
+  .section-promo {
+    margin: 0 100px 144px 100px;
+    max-width: none;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 60px;
+  }
+
+  .section-promo__ambassador-img {
+    width: 574px;
+    margin-top: 0;
+  }
+  .section {
+    max-width: none;
+  }
+
+  .section-promo__text {
+    margin: 0;
+    max-width: 474px;
+    line-height: 50px;
+  }
+
+  .section-promo__subtitle {
+    font-size: 20px;
+  }
+
+  .section-promo__title {
+    font-size: 68px;
+    line-height: 68px;
+  }
+
+  .section-promo__desc {
+    font-size: 20px;
+  }
+}
+
+//Секция 2 - подарок
+.section-conditions {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-conditions__title {
+  @include displaySerif;
+  line-height: 33.6px;
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+.section-conditions__all-conditions {
+  margin-top: 40px;
+}
+
+.section-conditions__one-condition {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.section-conditions__p {
+  margin-left: 16px;
+}
+
+//Адаптив секции с подарком
+
+@media screen and (min-width: 1170px) {
+  .section {
+    max-width: 1110px;
+  }
+  .section-conditions {
+    max-width: 1110px;
+    gap: 30px;
+    margin-bottom: 144px;
+  }
+  .section-conditions__all-conditions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .section-conditions__title {
+    font-size: 45px;
+  }
+
+  .section-conditions__desc {
+    font-size: 22px;
+  }
+}
+
+//Секция с формой для отправки промокода
+
+.section-number {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-number__form-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.section-number__formArea {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-number__title-mobile {
+  display: inline;
+  & span {
+    color: #48ccfd;
+  }
+}
+
+.section-number__title-desktop {
+  display: none;
+  & span {
+    color: #48ccfd;
+  }
+}
+
+.highlight-desktop {
+  display: none;
+}
+
+.section-number__form {
+  display: none;
+}
+
+#number {
+  background-color: transparent;
+  border-bottom: 2px solid gray;
+  margin-bottom: 30px;
+}
+
+.input-agreement + .agree {
+  display: inline-flex;
+  align-items: initial;
+}
+.input-agreement:checked + .agree::before {
+  background-image: url(img/checked.svg);
+}
+.input-agreement {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+}
+.agree::before {
+  content: "";
+
+  width: 22px;
+  height: 22px;
+  border: 1px solid gray;
+  margin-right: 8px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50%;
+}
+
+.agree-link {
+  color: gray;
+}
+.agree-link:visited {
+  text-decoration: none;
+}
+
+.a-tele2 {
+  color: white;
+  outline: none;
+  text-decoration: underline;
+}
+
+.section-number__one-instruction {
+  margin-bottom: 32px;
+}
+
+.instruction-number {
+  font-family: "Tele2 DisplaySerif";
+
+  border-radius: 50%;
+  border: 1px solid #48ccfd;
+  border-color: #39404c;
+  color: #48ccfd;
+  display: inline;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: 12.5px 20.3px;
+  margin-bottom: 26px;
+}
+
+.instruction-text {
+  margin-top: 20px;
+}
+
+//Адаптив секции с формой для отправки промокода
+
+@media screen and (min-width: 1170px) {
+  .section-number__form-mobile {
+    display: none;
+  }
+
+  .section-number {
+    margin-top: 50px;
+    margin-bottom: 144px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .section-number__formArea {
+    max-width: 300px;
+    line-height: 33px;
+  }
+
+  .highlight {
+    color: #48ccfd;
+    font-size: 24px;
+  }
+
+  .highlight-desktop {
+    display: none;
+  }
+  .section-number__title-mobile {
+    display: none;
+  }
+  .section-number__form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #number {
+    background-color: transparent;
+    border-bottom: 2px solid gray;
+    margin-bottom: 30px;
+    color: white;
+    padding-bottom: 10px;
+    font-size: 15px;
+  }
+
+  #number::placeholder {
+    color: #48ccfd;
+    font-size: 15px;
+  }
+
+  .input-agreement + .agree {
+    display: inline-flex;
+    align-items: initial;
+  }
+  .input-agreement:checked + .agree::before {
+    background-image: url(img/checked.svg);
+  }
+  .input-agreement {
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+  }
+  .agree::before {
+    content: "";
+
+    width: 22px;
+    height: 22px;
+    border: 1px solid gray;
+    margin-right: 8px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50%;
+  }
+
+  .agree-link {
+    color: gray;
+  }
+  .agree-link:visited {
+    text-decoration: none;
+  }
+}
+
+//Секция с подключением тарифа
+
+.tarif-mobile {
+  display: flex;
+  flex-direction: column;
+}
+
+.tarif-send {
+  text-align: center;
+}
+
+.tarif-send__img {
+  max-width: 240px;
+}
+
+.tarif-desktop {
+  display: none;
+}
+
+.change-tarif:visited {
+  color: black;
+  background-color: white;
+}
+
+.change-tarif:hover {
+  color: black;
+  background-color: gray;
+}
+
+//Адаптив секции с выбором тарифа
+
+@media screen and (min-width: 1170px) {
+  .tarif-mobile {
+    display: none;
+  }
+  .tarif-desktop {
+    display: flex;
+    max-width: 1110px;
+    justify-content: space-between;
+    margin-bottom: 144px;
+  }
+
+  .tarif-desc {
+    max-width: 487px;
+    margin-top: 62px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .tarif-send__img {
+    max-width: max-content;
+  }
+
+  .all-h3 {
+    font-size: 40px;
+  }
+
+  .section-number__one-instruction {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    width: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+  }
+
+  .instruction-text {
+    width: max-content;
+  }
+
+  .instruction-number {
+    margin-bottom: 0px;
+    margin-right: 10px;
+    width: 52px;
+  }
+}
+
+.section-socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #383d4a;
+  margin-bottom: 30px;
+  margin: 25px auto;
+  padding: 20px 0;
+  max-width: 1140px;
+}
+
+.social-usersAgreement {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.section-socials--p {
+  font-size: 13px;
+}
+
+.socials-usersAgreement {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.social-icon {
+  width: 44px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  gap: 40px;
+  margin-bottom: 20px;
+  margin: auto;
+  color: gray;
+  max-width: 1140px;
+}
+
+.footer__company {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-family: inherit;
+  margin-left: 20px;
+}
+
+.footer__studio {
+  display: none;
+}
+
+@media screen and (min-width: 1170px) {
+  .footer__company {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 0;
+  }
+
+  .footer__studio {
+    display: none;
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    gap: 20px;
+  }
+}
