@@ -164,6 +164,10 @@ $secondaryColor: rgb(72, 204, 253);
   position: absolute;
 }
 
+.agree:hover {
+  cursor: pointer;
+}
+
 .input-agreement + .agree {
   display: inline-flex;
   align-items: initial;
