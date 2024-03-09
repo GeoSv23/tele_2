@@ -9,6 +9,62 @@
   </head>
   <body>
     <header class="header">
+      <div class="city-option-mobile">
+        <table>
+          <tr>
+            <th class="table-title">Выберите город</th>
+          </tr>
+          <tr>
+            <td>Воронеж</td>
+            <td>Москва</td>
+          </tr>
+          <tr>
+            <td>Кемерово</td>
+            <td>Красноярск</td>
+          </tr>
+          <tr>
+            <td>Ростов-на-Дону</td>
+            <td>Иркутск</td>
+          </tr>
+          <tr>
+            <td>Новосибирск</td>
+            <td>н Новгород</td>
+          </tr>
+          <tr>
+            <td>Челябинск</td>
+            <td>Пермь</td>
+          </tr>
+          <tr>
+            <td>Санкт-Петербург</td>
+          </tr>
+        </table>
+      </div>
+      <div class="city-option">
+        <table>
+          <tr class="tr-desktop">
+            <th class="table-title">Выберите город</th>
+          </tr>
+          <tr class="tr-desktop">
+            <td class="td-destop">Воронеж</td>
+            <td class="td-destop">Москва</td>
+            <td class="td-destop">Ростов-на-Дону</td>
+          </tr>
+          <tr class="tr-desktop">
+            <td class="td-destop">Иркутск</td>
+            <td class="td-destop">Н. Новгород</td>
+            <td class="td-destop">Санкт Петербург</td>
+          </tr>
+          <tr class="tr-desktop">
+            <td class="td-destop">Кемерово</td>
+            <td class="td-destop">Новосибирск</td>
+            <td class="td-destop">Челябинск</td>
+          </tr>
+          <tr class="tr-desktop">
+            <td class="td-destop">Красноярск</td>
+            <td class="td-destop">Пермь</td>
+          </tr>
+        </table>
+      </div>
       <img class="header__logo" src="img/t2Logo.svg" alt="логотип" />
       <button class="header__location-button">
         <img
@@ -17,6 +73,15 @@
           alt="значок геолокации"
         />
         <span class="header__location-city">Москва</span>
+        <div class="header__offer-city">
+          <img src="/img/Rectangle 225.svg" alt="" class="city-pointer" />
+          <p class="header__offer-city-title">Ваш регион Ростов-на-Дону?</p>
+          <div class="header__offer-city-options-container">
+            <p class="header__option cheked">Да, верно</p>
+            <p class="header__option desktop">Изменить регион</p>
+            <p class="header__option mobile">Изменить регион</p>
+          </div>
+        </div>
       </button>
     </header>
     <section class="section section-promo">
@@ -225,5 +290,7 @@
         <img src="img/Logo 1.svg" alt="Чулаков" class="footer__logo" />
       </div>
     </footer>
+    <script src="/public/js/main.js"></script>
+    <script src="/public/js/change_city.js"></script>
   </body>
 </html>

@@ -48,6 +48,7 @@ $secondaryColor: rgb(72, 204, 253);
   background: none;
   border: none;
   align-items: center;
+  position: relative;
 }
 
 .location-icon {
@@ -56,7 +57,144 @@ $secondaryColor: rgb(72, 204, 253);
   height: 25px;
 }
 
+.header__offer-city {
+  cursor: default;
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  width: 320px;
+  height: 130px;
+  background-color: $mainColor;
+  color: black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  visibility: hidden;
+}
+
+.city-pointer {
+  position: absolute;
+  top: -8px;
+  right: 50px;
+}
+
+.header__offer-city-options-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header__option {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: center;
+  font-size: 13px;
+  width: 50%;
+  margin: 10px;
+  height: 40px;
+  padding: 9px 19px 9px 19px;
+}
+.header__option.cheked {
+  border: 1px solid;
+  border-radius: 30px;
+}
+
+.header__option.desktop {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: center;
+  font-size: 13px;
+  width: 50%;
+  margin: 10px;
+  height: 40px;
+  padding: 9px 19px 9px 19px;
+  display: none;
+}
+
+.header__option.mobile {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: center;
+  font-size: 13px;
+  width: 50%;
+  margin: 10px;
+  height: 40px;
+  padding: 9px 19px 9px 19px;
+}
+
+.header__option:hover {
+  cursor: pointer;
+  border: 1px solid;
+  border-radius: 30px;
+  background-color: gray;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.city-option-mobile {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding-top: 100px;
+  background-color: $backgcolor;
+  color: $mainColor;
+  z-index: 2;
+}
+
+.city-option {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding-top: 100px;
+  background-color: $backgcolor;
+  color: $mainColor;
+  z-index: 2;
+  visibility: hidden;
+}
+
+th {
+  padding: 10px;
+  font-size: 22px;
+  height: 20px;
+}
+tr {
+  padding: 10px;
+}
+
+td {
+  cursor: pointer;
+  height: 20px;
+  width: 300px;
+  padding: 15px;
+  font-size: 12px;
+}
+
+td:hover {
+  color: $secondaryColor;
+  border-radius: 20px;
+}
+
+.visible {
+  visibility: visible;
+  display: flex;
+}
+
+.modal-open {
+  overflow: hidden;
+}
 @media screen and (min-width: 1170px) {
+  .header__offer-city-options-container {
+    display: flex;
+  }
   .header__logo {
     width: 88px;
     height: 33px;
@@ -64,5 +202,51 @@ $secondaryColor: rgb(72, 204, 253);
 
   .header__location {
     font-size: 25px;
+  }
+
+  .header__option.desktop {
+    display: flex;
+  }
+  .header__option.mobile {
+    display: none;
+  }
+
+  .city-option-mobile {
+    display: none;
+  }
+  .header__offer-city {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 330px;
+    height: 130px;
+    background-color: $mainColor;
+    color: black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    visibility: hidden;
+  }
+
+  table {
+    margin: 0 120px;
+  }
+
+  th {
+    padding: 25px;
+    font-size: 30px;
+  }
+  tr {
+    padding: 25px;
+  }
+
+  td {
+    height: 70px;
+    padding: 25px;
+    font-size: 20px;
+  }
+  .visible {
+    visibility: visible;
   }
 }
