@@ -2,6 +2,8 @@
 
 @import url(/public/styles/fonts.scss);
 @import url(/public/styles/nullstyle.scss);
+@import url(/public/styles/header.scss);
+@import url(/public/styles/section_promo.scss);
 
 //Создаю миксины для шрифтов
 
@@ -27,10 +29,16 @@
   font-size: 36px;
 }
 
+//Переменные для цветов
+
+$backgcolor: #1f2229;
+$mainColor: rgb(255, 255, 255);
+$secondaryColor: rgb(72, 204, 253);
+
 //Оформление боди и первой секции
 
 body {
-  background-color: #1f2229;
+  background-color: $backgcolor;
   @include displaySerif;
 }
 
@@ -51,62 +59,10 @@ body {
   line-height: 27px;
 }
 
-.header {
-  @include p-text;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid #383d4a;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-}
-
-.header__logo {
-  width: 48px;
-  height: 18px;
-  margin-top: 13px;
-  margin-left: 16px;
-}
-
-.header__location-button {
-  @include p-text;
-  margin: 8px 14px 9px 0;
-  display: flex;
-  color: white;
-  background: none;
-  border: none;
-  align-items: center;
-}
-
-.location-icon {
-  margin-right: 10px;
-  width: 25px;
-  height: 25px;
-}
-
 .section {
   display: flex;
   max-width: 316px;
   margin: auto;
-}
-
-.section-promo {
-  margin-bottom: 72px;
-  flex-direction: column;
-}
-
-.section-promo__text {
-  margin: auto;
-  max-width: 288px;
-}
-
-.section-promo__title {
-  @include h2-text;
-  margin: 40px 0 16px;
-  text-transform: uppercase;
-  line-height: 36px;
-  & span {
-    color: #48ccfd;
-  }
 }
 
 .all-buttons {
@@ -122,7 +78,7 @@ body {
 
 .change-tarif {
   border-radius: 30px;
-  background-color: white;
+  background-color: $mainColor;
   margin-top: 56px;
   padding: 19px 44px;
   cursor: pointer;
@@ -132,7 +88,7 @@ body {
   font-weight: 700;
   text-align: center;
   max-width: 300px;
-  background-color: white;
+  background-color: $mainColor;
 }
 
 .section-promo__ambassador-img {
@@ -262,14 +218,14 @@ body {
 .section-number__title-mobile {
   display: inline;
   & span {
-    color: #48ccfd;
+    color: $secondaryColor;
   }
 }
 
 .section-number__title-desktop {
   display: none;
   & span {
-    color: #48ccfd;
+    color: $secondaryColor;
   }
 }
 
@@ -321,7 +277,7 @@ body {
 }
 
 .a-tele2 {
-  color: white;
+  color: $mainColor;
   outline: none;
   text-decoration: underline;
 }
@@ -336,7 +292,7 @@ body {
   border-radius: 50%;
   border: 1px solid #48ccfd;
   border-color: #39404c;
-  color: #48ccfd;
+  color: $secondaryColor;
   display: inline;
   flex-grow: 0;
   flex-shrink: 0;
@@ -369,7 +325,7 @@ body {
   }
 
   .highlight {
-    color: #48ccfd;
+    color: $secondaryColor;
     font-size: 24px;
   }
 
@@ -389,13 +345,13 @@ body {
     background-color: transparent;
     border-bottom: 2px solid gray;
     margin-bottom: 30px;
-    color: white;
+    color: $mainColor;
     padding-bottom: 10px;
     font-size: 15px;
   }
 
   #number::placeholder {
-    color: #48ccfd;
+    color: $secondaryColor;
     font-size: 15px;
   }
 
@@ -454,7 +410,7 @@ body {
 
 .change-tarif:visited {
   color: black;
-  background-color: white;
+  background-color: $mainColor;
 }
 
 .change-tarif:hover {
