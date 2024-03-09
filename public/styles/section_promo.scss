@@ -1,0 +1,45 @@
+$backgcolor: #1f2229;
+$mainColor: rgb(255, 255, 255);
+$secondaryColor: rgb(72, 204, 253);
+
+@mixin p-text {
+  font-family: "Tele2 Text";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+@mixin displaySerif {
+  font-family: "Tele2 DisplaySerif";
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  font-size: 18px;
+}
+
+@mixin h2-text {
+  font-family: "Standard Stencil";
+  font-weight: 700;
+  font-style: normal;
+  line-height: 36px;
+  font-size: 36px;
+}
+
+.section-promo {
+  margin-bottom: 72px;
+  flex-direction: column;
+}
+
+.section-promo__text {
+  margin: auto;
+  max-width: 288px;
+}
+
+.section-promo__title {
+  @include h2-text;
+  margin: 40px 0 16px;
+  text-transform: uppercase;
+  line-height: 36px;
+  & span {
+    color: $secondaryColor;
+  }
+}
