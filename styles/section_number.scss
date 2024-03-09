@@ -1,0 +1,245 @@
+//Секция с формой для отправки промокода
+
+$backgcolor: #1f2229;
+$mainColor: rgb(255, 255, 255);
+$secondaryColor: rgb(72, 204, 253);
+
+@mixin p-text {
+  font-family: "Tele2 Text";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+@mixin displaySerif {
+  font-family: "Tele2 DisplaySerif";
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  font-size: 18px;
+}
+
+@mixin h2-text {
+  font-family: "Standard Stencil";
+  font-weight: 700;
+  font-style: normal;
+  line-height: 36px;
+  font-size: 36px;
+}
+
+.section {
+  display: flex;
+  max-width: 316px;
+  margin: auto;
+  margin-bottom: 73px;
+}
+
+.section-number {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-number__form-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.section-number__formArea {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-number__title-mobile {
+  display: inline;
+  font-size: 24px;
+  margin-bottom: 50px;
+  & span {
+    color: $secondaryColor;
+  }
+}
+
+#number {
+  background-color: transparent;
+  border-bottom: 2px solid gray;
+  margin-bottom: 30px;
+}
+
+.send-promo-link {
+  list-style: none;
+  color: black;
+}
+
+.section-number__title-desktop {
+  display: none;
+  & span {
+    color: $secondaryColor;
+  }
+}
+
+.highlight-desktop {
+  display: none;
+}
+
+.section-number__form {
+  display: none;
+}
+
+.agree::before {
+  content: "";
+
+  width: 22px;
+  height: 22px;
+  border: 1px solid gray;
+  margin-right: 8px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50%;
+}
+
+.chekbox-container-mobile {
+  display: flex;
+}
+.agree-desc {
+  color: $mainColor;
+  font-family: initial;
+}
+
+.agree-link {
+  color: $mainColor;
+  text-decoration: underline;
+  font-family: initial;
+}
+.agree-link:visited {
+  text-decoration: none;
+}
+
+.a-tele2 {
+  color: $mainColor;
+  outline: none;
+  text-decoration: underline;
+}
+
+.section-number__one-instruction {
+  margin-bottom: 32px;
+}
+
+.instruction-number {
+  font-family: "Tele2 DisplaySerif";
+
+  border-radius: 50%;
+  border: 1px solid #48ccfd;
+  border-color: #39404c;
+  color: $secondaryColor;
+  display: inline;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: 12.5px 20.3px;
+  margin-bottom: 26px;
+}
+
+.instruction-text {
+  margin-top: 20px;
+}
+
+#number {
+  background-color: transparent;
+  border-bottom: 2px solid gray;
+  margin-bottom: 30px;
+  color: $mainColor;
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+
+#number::placeholder {
+  color: $secondaryColor;
+  font-size: 15px;
+}
+
+.input-agreement {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+.input-agreement + .agree {
+  display: inline-flex;
+  align-items: initial;
+}
+
+.agree::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  border: 1px solid gray;
+  margin-right: 8px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50%;
+}
+
+.input-agreement:checked + .agree::before {
+  background-image: url(/img/checked.svg);
+}
+
+//Адаптив секции с формой для отправки промокода
+
+@media screen and (min-width: 1170px) {
+  .section-number__form-mobile {
+    display: none;
+  }
+
+  .checkbox-container {
+    display: flex;
+  }
+
+  .section-number {
+    margin-top: 50px;
+    margin-bottom: 144px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .section-number__formArea {
+    max-width: 380px;
+    line-height: 33px;
+  }
+
+  .send-promo-button {
+    max-width: 250px;
+  }
+  .highlight {
+    color: $secondaryColor;
+    font-size: 24px;
+  }
+
+  .section-number__title-mobile {
+    display: none;
+    &span {
+      display: none;
+    }
+  }
+  .section-number__form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-number__title-desktop {
+    display: block;
+    @include displaySerif;
+    font-size: 40px;
+    line-height: 100px;
+  }
+
+  .highlight-desktop {
+    display: block;
+    color: $secondaryColor;
+    font-size: 40px;
+  }
+}

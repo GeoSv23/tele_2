@@ -1,0 +1,81 @@
+$backgcolor: #1f2229;
+$mainColor: rgb(255, 255, 255);
+$secondaryColor: rgb(72, 204, 253);
+
+@mixin p-text {
+  font-family: "Tele2 Text";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+@mixin displaySerif {
+  font-family: "Tele2 DisplaySerif";
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  font-size: 18px;
+}
+
+@mixin h2-text {
+  font-family: "Standard Stencil";
+  font-weight: 700;
+  font-style: normal;
+  line-height: 36px;
+  font-size: 36px;
+}
+
+.section {
+  display: flex;
+  max-width: 316px;
+  margin: auto;
+  margin-bottom: 73px;
+}
+
+//Секция 2 - подарок
+.section-conditions {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-conditions__title {
+  @include displaySerif;
+  line-height: 33.6px;
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+.section-conditions__all-conditions {
+  margin-top: 40px;
+}
+
+.section-conditions__one-condition {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.section-conditions__p {
+  margin-left: 16px;
+}
+
+//Адаптив секции с подарком
+
+@media screen and (min-width: 1170px) {
+  .section-conditions {
+    max-width: 1110px;
+    gap: 30px;
+    margin-bottom: 144px;
+  }
+  .section-conditions__all-conditions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .section-conditions__title {
+    font-size: 45px;
+  }
+
+  .section-conditions__desc {
+    font-size: 22px;
+  }
+}

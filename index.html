@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tele2 - это ваша выгода</title>
-    <link rel="stylesheet" crossorigin href="/tele_2/assets/index-CMW-E0VZ.css">
+    <link rel="stylesheet" crossorigin href="/tele_2/assets/index-Cp3882so.css">
   </head>
   <body>
     <header class="header">
@@ -66,7 +66,7 @@
         <h3 class="section-number__title-desktop">Несколько шагов</h3>
         <span class="highlight-desktop"> и 1 ТБ - ваш</span>
 
-        <h3 class="all-h3 section-number__title-mobile">
+        <h3 class="section-number__title-mobile">
           Оставь номер <br />
           <span class="highlight"> и 1 ТБ - ваш</span>
         </h3>
@@ -80,19 +80,25 @@
             id="number"
             placeholder="+7 (999) 692 06 09"
           />
-          <p>
-            <input
-              type="checkbox"
-              class="input-agreement"
-              id="agreement-check"
-            />
-            <label class="agree" for="agreement-check">
-              <a class="agree-link" href="#"
-                >Даю согласие на обработку персональных данных</a
-              >
-            </label>
-          </p>
-          <input class="all-buttons" type="submit" placeholder="Отправить" />
+          <div class="chekbox-container">
+            <p>
+              <input
+                checked
+                type="checkbox"
+                class="input-agreement"
+                id="agreement-check"
+              />
+              <label class="agree" for="agreement-check">
+                <p class="agree-desc">
+                  Даю согласие на обработку персональных данных.
+                  <a class="agree-link" href="#">Условия соглашения</a>
+                </p>
+              </label>
+            </p>
+          </div>
+          <button class="all-buttons send-promo-button">
+            <a class="send-promo-link" href="#">Выслать промокод</a>
+          </button>
         </form>
       </div>
       <div class="section-number__all-instructions">
@@ -133,19 +139,25 @@
             id="number"
             placeholder="+7 (999) 692 06 09"
           />
-          <p>
-            <input
-              type="checkbox"
-              class="input-agreement"
-              id="agreement-check"
-            />
-            <label class="agree" for="agreement-check">
-              <a class="agree-link" href="#"
-                >Даю согласие на обработку персональных данных</a
-              >
-            </label>
-          </p>
-          <input class="all-buttons" type="submit" placeholder="Отправить" />
+          <div class="chekbox-container-mobile">
+            <p>
+              <input
+                checked
+                type="checkbox"
+                class="input-agreement"
+                id="agreement-check-mobile"
+              />
+              <label class="agree" for="agreement-check-mobile">
+                <p class="agree-desc">
+                  Даю согласие на обработку персональных данных. <br />
+                  <a class="agree-link" href="#">Условия соглашения</a>
+                </p>
+              </label>
+            </p>
+          </div>
+          <button class="all-buttons send-promo-button">
+            <a class="send-promo-link" href="#">Выслать промокод</a>
+          </button>
         </form>
       </div>
     </section>
