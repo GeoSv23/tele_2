@@ -1,0 +1,125 @@
+$backgcolor: #1f2229;
+$mainColor: rgb(255, 255, 255);
+$secondaryColor: rgb(72, 204, 253);
+
+@mixin p-text {
+  font-family: "Tele2 Text";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+@mixin displaySerif {
+  font-family: "Tele2 DisplaySerif";
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  font-size: 18px;
+}
+
+@mixin h2-text {
+  font-family: "Standard Stencil";
+  font-weight: 700;
+  font-style: normal;
+  line-height: 36px;
+  font-size: 36px;
+}
+
+.section {
+  display: flex;
+  max-width: 316px;
+  margin: auto;
+  margin-bottom: 73px;
+}
+//Секция с подключением тарифа
+
+.tarif-mobile {
+  display: flex;
+  flex-direction: column;
+}
+
+.tarif-send {
+  text-align: center;
+}
+
+.tarif-send__img {
+  max-width: 240px;
+}
+
+.tarif-desktop {
+  display: none;
+}
+
+.change-tarif {
+  border-radius: 30px;
+  background-color: $mainColor;
+  margin-top: 56px;
+  padding: 19px 44px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  max-width: 300px;
+  background-color: $mainColor;
+}
+
+.change-tarif:visited {
+  color: black;
+  background-color: $mainColor;
+}
+
+.change-tarif:hover {
+  color: black;
+  background-color: gray;
+}
+
+//Адаптив секции с выбором тарифа
+
+@media screen and (min-width: 1170px) {
+  .tarif-mobile {
+    display: none;
+  }
+  .tarif-desktop {
+    display: flex;
+    max-width: 1110px;
+    justify-content: space-between;
+    margin-bottom: 144px;
+  }
+
+  .tarif-desc {
+    max-width: 487px;
+    margin-top: 62px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .tarif-send__img {
+    max-width: max-content;
+  }
+
+  .all-h3 {
+    font-size: 40px;
+  }
+
+  .section-number__one-instruction {
+    scroll-snap-align: start;
+
+    width: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+  }
+
+  .instruction-text {
+    width: max-content;
+  }
+
+  .instruction-number {
+    margin-bottom: 0px;
+    margin-right: 10px;
+    width: 52px;
+  }
+}

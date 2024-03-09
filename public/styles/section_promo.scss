@@ -24,6 +24,13 @@ $secondaryColor: rgb(72, 204, 253);
   font-size: 36px;
 }
 
+.section {
+  display: flex;
+  max-width: 316px;
+  margin: auto;
+  margin-bottom: 73px;
+}
+
 .section-promo {
   margin-bottom: 72px;
   flex-direction: column;
@@ -41,5 +48,48 @@ $secondaryColor: rgb(72, 204, 253);
   line-height: 36px;
   & span {
     color: $secondaryColor;
+  }
+}
+
+.section-promo__ambassador-img {
+  width: 316px;
+  margin-top: 48px;
+}
+
+//Адаптив первой секции
+@media screen and (min-width: 1170px) {
+  .section-promo {
+    margin: 0 auto 144px;
+    max-width: none;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 60px;
+  }
+
+  .section-promo__ambassador-img {
+    width: 574px;
+    margin-top: 0;
+  }
+  .section {
+    max-width: none;
+  }
+
+  .section-promo__text {
+    margin: 0;
+    max-width: 474px;
+    line-height: 50px;
+  }
+
+  .section-promo__subtitle {
+    font-size: 20px;
+  }
+
+  .section-promo__title {
+    font-size: 68px;
+    line-height: 68px;
+  }
+
+  .section-promo__desc {
+    font-size: 20px;
   }
 }
