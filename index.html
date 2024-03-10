@@ -5,11 +5,48 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tele2 - это ваша выгода</title>
-    <script type="module" crossorigin src="/tele_2/assets/index-BQq3Dp2J.js"></script>
-    <link rel="stylesheet" crossorigin href="/tele_2/assets/index-1FpF7mCE.css">
+    <script type="module" crossorigin src="/tele_2/assets/index-wRt0Bn4w.js"></script>
+    <link rel="stylesheet" crossorigin href="/tele_2/assets/index-B60eShZh.css">
   </head>
   <body>
-    <div class="header__offer-city-modal"></div>
+    <div class="modal-wrapper">
+      <form class="modal-form" action="/" method="post">
+        <label for="input-number-modal"> Номер телефона </label>
+        <input
+          pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+          type="tel"
+          minlength="11"
+          maxlength="11"
+          id="input-number-modal"
+          placeholder="+7 (999) 692 06 09"
+        />
+        <div class="checkbox-container">
+          <p>
+            <input
+              checked
+              type="checkbox"
+              class="input-agreement"
+              id="agreement-check"
+            />
+            <label class="agree" for="agreement-check">
+              <p class="agree-desc">
+                Даю согласие на обработку персональных данных.
+                <a class="agree-link" href="#">Условия соглашения</a>
+              </p>
+            </label>
+          </p>
+        </div>
+        <button class="send-promo-button-modal">
+          <a class="send-promo-link" href="#">Выслать промокод</a>
+        </button>
+        <img
+          src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2036%2036'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20aria-hidden='true'%20role='img'%20class='iconify%20iconify--twemoji'%20preserveAspectRatio='xMidYMid%20meet'%3e%3cpath%20fill='%23DD2E44'%20d='M21.533%2018.002L33.768%205.768a2.5%202.5%200%200%200-3.535-3.535L17.998%2014.467L5.764%202.233a2.498%202.498%200%200%200-3.535%200a2.498%202.498%200%200%200%200%203.535l12.234%2012.234L2.201%2030.265a2.498%202.498%200%200%200%201.768%204.267c.64%200%201.28-.244%201.768-.732l12.262-12.263l12.234%2012.234a2.493%202.493%200%200%200%201.768.732a2.5%202.5%200%200%200%201.768-4.267L21.533%2018.002z'%3e%3c/path%3e%3c/svg%3e"
+          alt="значок крестик"
+          class="close-button"
+        />
+      </form>
+    </div>
+    <div class="background-modal"></div>
     <header class="header">
       <div class="city-option-mobile">
         <table>
@@ -78,7 +115,7 @@
         <span class="header__location-city">Москва</span>
         <div class="header__offer-city">
           <img src="data:image/svg+xml,%3csvg%20width='16.000000'%20height='7.585815'%20viewBox='0%200%2016%207.58582'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cdesc%3e%20Created%20with%20Pixso.%20%3c/desc%3e%3cdefs/%3e%3cpath%20id='Rectangle%20225'%20d='M8.70703%200.292969L16%207.58582L0%207.58582L7.29297%200.292969C7.68335%20-0.0976562%208.31665%20-0.0976562%208.70703%200.292969Z'%20fill='%23FFFFFF'%20fill-opacity='1.000000'%20fill-rule='evenodd'/%3e%3c/svg%3e" alt="" class="city-pointer" />
-          <p class="header__offer-city-title">Ваш регион Ростов-на-Дону?</p>
+          <p class="header__offer-city-title">Ваш регион Москва</p>
           <div class="header__offer-city-options-container">
             <p class="header__option cheked">Да, верно</p>
             <p class="header__option desktop">Изменить регион</p>
@@ -242,7 +279,7 @@
           class="all-buttons change-tarif"
           href="https://rostov.tele2.ru"
           target="_blank"
-          >Оофрмить тариф</a
+          >Офрмить тариф</a
         >
       </div>
       <div class="tarif-send">

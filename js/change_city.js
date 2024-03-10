@@ -1,12 +1,19 @@
 const floatOffer = document.querySelector(".header__offer-city");
 
-const modalBackground = document.querySelector(".header__offer-city-modal");
+const modalBackground = document.querySelector(".background-modal");
+
+//закрыть модальное окно при нажатии не на парящее меню
+modalBackground.addEventListener("click", () => {
+  modalBackground.classList.remove("visible");
+  floatOffer.classList.remove("visible");
+  body.classList.remove("modal-open");
+});
 //Уточнение города через 1сек
 setTimeout(() => {
   floatOffer.classList.toggle("visible");
   modalBackground.classList.add("visible");
   body.classList.add("modal-open");
-}, 1000);
+}, 500);
 floatOffer.addEventListener("click", () => {
   floatOffer.classList.toggle("visible");
   modalBackground.classList.toggle("visible");

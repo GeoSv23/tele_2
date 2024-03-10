@@ -38,6 +38,10 @@ $secondaryColor: rgb(72, 204, 253);
   flex-direction: column;
 }
 
+.section-number__form.modal {
+  visibility: hidden;
+}
+
 .section-number__form-mobile {
   display: flex;
   flex-direction: column;
