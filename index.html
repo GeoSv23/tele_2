@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="public/styles/style.scss" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/tele2-svgrepo-com.svg"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tele2 - это ваша выгода</title>
   </head>
@@ -25,9 +31,9 @@
               checked
               type="checkbox"
               class="input-agreement"
-              id="agreement-check"
+              id="agreement-check-modal"
             />
-            <label class="agree" for="agreement-check">
+            <label class="agree" for="agreement-check-modal">
               <p class="agree-desc">
                 Даю согласие на обработку персональных данных.
                 <a class="agree-link" href="#">Условия соглашения</a>
@@ -47,37 +53,6 @@
     </div>
     <div class="background-modal"></div>
     <header class="header">
-      <div class="city-option-mobile">
-        <table>
-          <tr>
-            <th class="table-title">Выберите город</th>
-          </tr>
-          <tr>
-            <td>Воронеж</td>
-            <td>Москва</td>
-          </tr>
-          <tr>
-            <td>Кемерово</td>
-            <td>Красноярск</td>
-          </tr>
-          <tr>
-            <td>Ростов-на-Дону</td>
-            <td>Иркутск</td>
-          </tr>
-          <tr>
-            <td>Новосибирск</td>
-            <td>н Новгород</td>
-          </tr>
-          <tr>
-            <td>Челябинск</td>
-            <td>Пермь</td>
-          </tr>
-          <tr>
-            <td>Санкт-Петербург</td>
-          </tr>
-        </table>
-      </div>
-
       <img class="header__logo" src="img/t2Logo.svg" alt="логотип" />
       <button class="header__location-button">
         <img
@@ -85,44 +60,34 @@
           src="img/Location.png"
           alt="значок геолокации"
         />
-        <span class="header__location-city-mobile">Москва</span>
         <span class="header__location-city">Москва</span>
         <div class="header__offer-city">
           <img src="/img/Rectangle 225.svg" alt="" class="city-pointer" />
           <p class="header__offer-city-title">Ваш регион Москва</p>
           <div class="header__offer-city-options-container">
             <p class="header__option cheked">Да, верно</p>
-            <p class="header__option desktop">Изменить регион</p>
-            <p class="header__option mobile">Изменить регион</p>
+            <p class="header__option header__option-change">Изменить регион</p>
           </div>
         </div>
       </button>
     </header>
-    <div class="city-option">
-      <table>
-        <tr class="tr-desktop">
-          <th class="table-title-destop">Выберите город</th>
-        </tr>
-        <tr class="tr-desktop">
-          <td class="td-destop">Воронеж</td>
-          <td class="td-destop">Москва</td>
-          <td class="td-destop">Ростов-на-Дону</td>
-        </tr>
-        <tr class="tr-desktop">
-          <td class="td-destop">Иркутск</td>
-          <td class="td-destop">Н. Новгород</td>
-          <td class="td-destop">Санкт Петербург</td>
-        </tr>
-        <tr class="tr-desktop">
-          <td class="td-destop">Кемерово</td>
-          <td class="td-destop">Новосибирск</td>
-          <td class="td-destop">Челябинск</td>
-        </tr>
-        <tr class="tr-desktop">
-          <td class="td-destop">Красноярск</td>
-          <td class="td-destop">Пермь</td>
-        </tr>
-      </table>
+    <div class="cities-wrapper">
+      <div class="cities">
+        <h1 class="cities__title">Выберите город</h1>
+        <div class="cities__items">
+          <h2 class="cities__item">Пермь</h2>
+          <h2 class="cities__item">Воронеж</h2>
+          <h2 class="cities__item">Москва</h2>
+          <h2 class="cities__item">Ростов-на-Дону</h2>
+          <h2 class="cities__item">Иркутск</h2>
+          <h2 class="cities__item">Н. Новгород</h2>
+          <h2 class="cities__item">Красноярск</h2>
+          <h2 class="cities__item">Кемерово</h2>
+          <h2 class="cities__item">Новосибирск</h2>
+          <h2 class="cities__item">Челябинск</h2>
+          <h2 class="cities__item">Санкт-Петербург</h2>
+        </div>
+      </div>
     </div>
     <section class="section section-promo">
       <div class="section-promo__text">
@@ -330,17 +295,13 @@
         <img src="img/Logo 1.svg" alt="Чулаков" class="footer__logo" />
       </div>
       <div class="toTop-wrapper">
-        <img
-          src="img/arrow-circle-up-svgrepo-com.svg"
-          alt=""
-          class="toTop-img"
-        />
+        <img src="img/arrow-up-337-svgrepo-com.svg" alt="" class="toTop-img" />
       </div>
     </footer>
 
     <script type="module" src="/public/js/change_city.js"></script>
     <script type="module" src="/public/js/currentCityButton.js"></script>
     <script type="module" src="/public/js/takePart.js"></script>
-    <!-- <script type="module" src="/public/js/scrollTop.js"></script> -->
+    <script type="module" src="/public/js/scrollTop.js"></script>
   </body>
 </html>

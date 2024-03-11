@@ -1,6 +1,10 @@
 //
 const floatOffer = document.querySelector(".header__offer-city");
 const modalBackground = document.querySelector(".background-modal");
+const changeCity = document.querySelector(".header__option-change");
+const cityOptionTable = document.querySelector(".cities-wrapper");
+const body = document.body;
+const currentCity = document.querySelector(".header__location-city");
 
 //закрыть модальное окно при нажатии не на парящее меню
 modalBackground.addEventListener("click", () => {
@@ -8,56 +12,36 @@ modalBackground.addEventListener("click", () => {
   floatOffer.classList.remove("visible");
   body.classList.remove("modal-open");
 });
-//Уточнение города через 1сек
+//Уточнение города через 2м.сек.
 setTimeout(() => {
   floatOffer.classList.toggle("visible");
   modalBackground.classList.add("visible");
   body.classList.add("modal-open");
-}, 500);
+}, 200);
+
 floatOffer.addEventListener("click", () => {
   floatOffer.classList.toggle("visible");
   modalBackground.classList.toggle("visible");
-  // body.classList.remove("modal-open");
 });
 
-console.log(floatOffer);
+//Нажатие на всплывающем меню кнопки 'изменить город' приводит к открытию таблтцы городов
 
-///////////////////
-
-const changeCityDesktop = document.querySelectorAll(".header__option")[1];
-const cityOptionDesktop = document.querySelector(".city-option");
-const changeCityMobile = document.querySelectorAll(".header__option")[2];
-const cityOptionMobile = document.querySelector(".city-option-mobile");
-const body = document.body;
-
-changeCityDesktop.addEventListener("click", () => {
-  cityOptionDesktop.classList.add("visible");
+changeCity.addEventListener("click", () => {
+  cityOptionTable.classList.add("visible");
   body.classList.add("modal-open");
 });
-
-changeCityMobile.addEventListener("click", () => {
-  cityOptionMobile.classList.add("visible");
-  body.classList.add("modal-open");
-});
-
-//////////////////
 
 //выбор города в мод окне
 
-const currentCity = document.querySelector(".header__location-city");
-//при нажатии на город скролл ичезает
+// убрать скролл когда открыта таблица городов
 currentCity.addEventListener("click", () => {
   body.classList.add("modal-open");
 });
-//desktop
-cityOptionDesktop.onclick = function (event) {
-  cityOptionDesktop.classList.remove("visible");
-  body.classList.remove("modal-open");
-  currentCity.innerHTML = event.target.innerHTML;
-};
-//mobile
-cityOptionMobile.onclick = function (event) {
-  cityOptionMobile.classList.remove("visible");
+
+//при нажатии на город скролл ичезает
+
+cityOptionTable.onclick = function (event) {
+  cityOptionTable.classList.remove("visible");
   body.classList.remove("modal-open");
   currentCity.innerHTML = event.target.innerHTML;
 };
