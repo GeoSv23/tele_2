@@ -1,5 +1,5 @@
+//
 const floatOffer = document.querySelector(".header__offer-city");
-
 const modalBackground = document.querySelector(".background-modal");
 
 //закрыть модальное окно при нажатии не на парящее меню
@@ -45,6 +45,10 @@ changeCityMobile.addEventListener("click", () => {
 //выбор города в мод окне
 
 const currentCity = document.querySelector(".header__location-city");
+//при нажатии на город скролл ичезает
+currentCity.addEventListener("click", () => {
+  body.classList.add("modal-open");
+});
 //desktop
 cityOptionDesktop.onclick = function (event) {
   cityOptionDesktop.classList.remove("visible");
