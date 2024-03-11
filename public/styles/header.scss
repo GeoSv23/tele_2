@@ -32,6 +32,13 @@ $secondaryColor: rgb(72, 204, 253);
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
+.background-modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
 
 .header__logo {
   width: 48px;
@@ -49,6 +56,10 @@ $secondaryColor: rgb(72, 204, 253);
   border: none;
   align-items: center;
   position: relative;
+}
+
+.header__location-city {
+  display: none;
 }
 
 .location-icon {
@@ -140,11 +151,10 @@ $secondaryColor: rgb(72, 204, 253);
 }
 
 .city-option-mobile {
-  display: none;
+  visibility: hidden;
   width: 100%;
   height: 100%;
   position: absolute;
-  padding-top: 100px;
   background-color: $backgcolor;
   color: $mainColor;
   z-index: 2;
@@ -160,12 +170,21 @@ $secondaryColor: rgb(72, 204, 253);
   z-index: 2;
   visibility: hidden;
 }
-
 th {
+  @include displaySerif;
   padding: 10px;
-  font-size: 22px;
+  font-size: 24px;
   height: 20px;
+  text-align: start;
 }
+th.table-title-desktop {
+  @include displaySerif;
+  padding: 10px;
+  font-size: 24px;
+  height: 20px;
+  text-align: start;
+}
+
 tr {
   padding: 10px;
 }
@@ -173,9 +192,8 @@ tr {
 td {
   cursor: pointer;
   height: 20px;
-  width: 300px;
   padding: 15px;
-  font-size: 12px;
+  font-size: 18px;
 }
 
 td:hover {
@@ -202,6 +220,13 @@ td:hover {
 
   .header__location {
     font-size: 25px;
+  }
+
+  .header__location-city {
+    display: block;
+  }
+  .header__location-city-mobile {
+    display: none;
   }
 
   .header__option.desktop {

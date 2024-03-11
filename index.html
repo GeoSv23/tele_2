@@ -8,6 +8,44 @@
     <title>Tele2 - это ваша выгода</title>
   </head>
   <body>
+    <div class="modal-wrapper">
+      <form class="modal-form" action="/" method="post">
+        <label for="input-number-modal"> Номер телефона </label>
+        <input
+          pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+          type="tel"
+          minlength="11"
+          maxlength="11"
+          id="input-number-modal"
+          placeholder="+7 (999) 692 06 09"
+        />
+        <div class="checkbox-container">
+          <p>
+            <input
+              checked
+              type="checkbox"
+              class="input-agreement"
+              id="agreement-check"
+            />
+            <label class="agree" for="agreement-check">
+              <p class="agree-desc">
+                Даю согласие на обработку персональных данных.
+                <a class="agree-link" href="#">Условия соглашения</a>
+              </p>
+            </label>
+          </p>
+        </div>
+        <button class="send-promo-button-modal">
+          <a class="send-promo-link" href="#">Выслать промокод</a>
+        </button>
+        <img
+          src="/img/cross-mark-svgrepo-com.svg"
+          alt="значок крестик"
+          class="close-button"
+        />
+      </form>
+    </div>
+    <div class="background-modal"></div>
     <header class="header">
       <div class="city-option-mobile">
         <table>
@@ -39,32 +77,7 @@
           </tr>
         </table>
       </div>
-      <div class="city-option">
-        <table>
-          <tr class="tr-desktop">
-            <th class="table-title">Выберите город</th>
-          </tr>
-          <tr class="tr-desktop">
-            <td class="td-destop">Воронеж</td>
-            <td class="td-destop">Москва</td>
-            <td class="td-destop">Ростов-на-Дону</td>
-          </tr>
-          <tr class="tr-desktop">
-            <td class="td-destop">Иркутск</td>
-            <td class="td-destop">Н. Новгород</td>
-            <td class="td-destop">Санкт Петербург</td>
-          </tr>
-          <tr class="tr-desktop">
-            <td class="td-destop">Кемерово</td>
-            <td class="td-destop">Новосибирск</td>
-            <td class="td-destop">Челябинск</td>
-          </tr>
-          <tr class="tr-desktop">
-            <td class="td-destop">Красноярск</td>
-            <td class="td-destop">Пермь</td>
-          </tr>
-        </table>
-      </div>
+
       <img class="header__logo" src="img/t2Logo.svg" alt="логотип" />
       <button class="header__location-button">
         <img
@@ -72,10 +85,11 @@
           src="img/Location.png"
           alt="значок геолокации"
         />
+        <span class="header__location-city-mobile">Москва</span>
         <span class="header__location-city">Москва</span>
         <div class="header__offer-city">
           <img src="/img/Rectangle 225.svg" alt="" class="city-pointer" />
-          <p class="header__offer-city-title">Ваш регион Ростов-на-Дону?</p>
+          <p class="header__offer-city-title">Ваш регион Москва</p>
           <div class="header__offer-city-options-container">
             <p class="header__option cheked">Да, верно</p>
             <p class="header__option desktop">Изменить регион</p>
@@ -84,6 +98,32 @@
         </div>
       </button>
     </header>
+    <div class="city-option">
+      <table>
+        <tr class="tr-desktop">
+          <th class="table-title-destop">Выберите город</th>
+        </tr>
+        <tr class="tr-desktop">
+          <td class="td-destop">Воронеж</td>
+          <td class="td-destop">Москва</td>
+          <td class="td-destop">Ростов-на-Дону</td>
+        </tr>
+        <tr class="tr-desktop">
+          <td class="td-destop">Иркутск</td>
+          <td class="td-destop">Н. Новгород</td>
+          <td class="td-destop">Санкт Петербург</td>
+        </tr>
+        <tr class="tr-desktop">
+          <td class="td-destop">Кемерово</td>
+          <td class="td-destop">Новосибирск</td>
+          <td class="td-destop">Челябинск</td>
+        </tr>
+        <tr class="tr-desktop">
+          <td class="td-destop">Красноярск</td>
+          <td class="td-destop">Пермь</td>
+        </tr>
+      </table>
+    </div>
     <section class="section section-promo">
       <div class="section-promo__text">
         <p class="p section-promo__subtitle">
@@ -239,7 +279,7 @@
           class="all-buttons change-tarif"
           href="https://rostov.tele2.ru"
           target="_blank"
-          >Оофрмить тариф</a
+          >Офрмить тариф</a
         >
       </div>
       <div class="tarif-send">
@@ -289,8 +329,18 @@
         <p class="footer__p">Сделано в студии Олега Чулакова</p>
         <img src="img/Logo 1.svg" alt="Чулаков" class="footer__logo" />
       </div>
+      <div class="toTop-wrapper">
+        <img
+          src="img/arrow-circle-up-svgrepo-com.svg"
+          alt=""
+          class="toTop-img"
+        />
+      </div>
     </footer>
-    <script src="/public/js/main.js"></script>
-    <script src="/public/js/change_city.js"></script>
+
+    <script type="module" src="/public/js/change_city.js"></script>
+    <script type="module" src="/public/js/currentCityButton.js"></script>
+    <script type="module" src="/public/js/takePart.js"></script>
+    <!-- <script type="module" src="/public/js/scrollTop.js"></script> -->
   </body>
 </html>

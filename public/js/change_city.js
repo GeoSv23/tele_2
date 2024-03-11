@@ -1,12 +1,23 @@
+//
 const floatOffer = document.querySelector(".header__offer-city");
+const modalBackground = document.querySelector(".background-modal");
 
+//закрыть модальное окно при нажатии не на парящее меню
+modalBackground.addEventListener("click", () => {
+  modalBackground.classList.remove("visible");
+  floatOffer.classList.remove("visible");
+  body.classList.remove("modal-open");
+});
 //Уточнение города через 1сек
 setTimeout(() => {
   floatOffer.classList.toggle("visible");
-}, 1000);
-
+  modalBackground.classList.add("visible");
+  body.classList.add("modal-open");
+}, 500);
 floatOffer.addEventListener("click", () => {
   floatOffer.classList.toggle("visible");
+  modalBackground.classList.toggle("visible");
+  // body.classList.remove("modal-open");
 });
 
 console.log(floatOffer);
@@ -34,6 +45,10 @@ changeCityMobile.addEventListener("click", () => {
 //выбор города в мод окне
 
 const currentCity = document.querySelector(".header__location-city");
+//при нажатии на город скролл ичезает
+currentCity.addEventListener("click", () => {
+  body.classList.add("modal-open");
+});
 //desktop
 cityOptionDesktop.onclick = function (event) {
   cityOptionDesktop.classList.remove("visible");
