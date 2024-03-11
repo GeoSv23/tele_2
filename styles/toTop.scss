@@ -1,0 +1,41 @@
+.toTop-wrapper {
+  position: fixed;
+  right: calc(50% - 40px);
+  bottom: 100px;
+  width: 80px;
+  height: 80px;
+  background-color: #d7ff38;
+  border-radius: 50%;
+  padding: 20px;
+  cursor: pointer;
+  visibility: hidden;
+  transition: 0.2s;
+  transform: scale(0.1);
+  opacity: 0.5;
+}
+
+.toTop-img {
+  width: 100%;
+}
+
+@media screen and (min-width: 1170px) {
+  .toTop-wrapper {
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    width: 80px;
+    height: 80px;
+    background-color: #d7ff38;
+    border-radius: 50%;
+    padding: 20px;
+    cursor: pointer;
+    visibility: hidden;
+    transition: 0.1s;
+    transform: scale(0.1);
+  }
+}
+
+.visible {
+  visibility: visible;
+  transform: scale(1);
+}

@@ -1,3 +1,4 @@
+// при нажатии на кнопку 'принять участие' первой секции открывается модальное окно
 const takePartButton = document.querySelector(
   ".section-promo__button, .all-buttons"
 );
@@ -6,8 +7,8 @@ const modalFormForm = document.querySelector(".modal-form");
 const closeButton = document.querySelector(".close-button");
 const sendFormModal = document.querySelector(".send-promo-button-modal");
 const mediaQueryMobile = window.innerWidth;
-console.log(mediaQueryMobile);
 
+//при нажатии появляется темный фон и останавливается скролл
 takePartButton.addEventListener("click", () => {
   document.body.classList.add("modal-open");
   modalFormForm.classList.add("modal-open-form");
@@ -18,11 +19,9 @@ takePartButton.addEventListener("click", () => {
   } else {
     modalFormForm.classList.remove("modal-form-mobile");
   }
-
-  console.log(event.target);
 });
-console.log(modalFormForm);
 
+//крестик в углу формы закрыввает ее
 closeButton.addEventListener("click", () => {
   document.body.classList.remove("modal-open");
   modalFormForm.classList.remove("modal-open-form");
@@ -36,5 +35,3 @@ sendFormModal.addEventListener("click", () => {
   modalFormForm.classList.remove("modal-open-form");
   modalWrapper.classList.remove("modal-open-form");
 });
-
-/// Мобильная версия модального окна
