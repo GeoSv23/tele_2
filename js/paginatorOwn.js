@@ -1,8 +1,7 @@
 const slide1 = document.querySelector(".slide1");
 const slide2 = document.querySelector(".slide2");
-
-getUsers();
 let userOwn;
+
 async function getUsers() {
   try {
     const usersArr = await fetch("https://api.github.com/users?since=0}");
@@ -15,6 +14,8 @@ async function getUsers() {
     console.error("Error fetching users:", error);
   }
 }
+
+getUsers();
 
 function renderNewUsers(userOwn) {
   userOwn.forEach((user) => {
