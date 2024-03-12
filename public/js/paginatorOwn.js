@@ -9,7 +9,6 @@ async function getUsers() {
     const users = await usersArr.json();
     userOwn = users.slice(0, 10);
     renderNewUsers(userOwn);
-    console.log(userOwn);
     const userDescFirst = document.querySelectorAll(".user-desc")[0];
     userDescFirst.classList.add("visible");
   } catch (error) {

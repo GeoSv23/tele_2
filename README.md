@@ -1,8 +1,27 @@
-# React + Vite
+# Описание проекта
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Этот проект представляет собой веб-сайт для компании Tele2, который предлагает привлекательные тарифы и акции для новых абонентов. Сайт разработан с использованием HTML, CSS и JavaScript.
 
-Currently, two official plugins are available:
+## Функциональность
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Возможность выбора города для пользователя.
+- Промо-акция с тарифом "Мой онлайн+" и подарком в виде 1 ТБ трафика для новых абонентов.
+- Форма для получения промокода по номеру телефона.
+- Мобильно-адаптивный дизайн для удобного просмотра на различных устройствах.
+- Получение списка пользователей через GET-звпрос
+- Слайдер для удобной навигации по содержимому.
+
+## Используемые технологии
+
+- HTML
+- CSS (с использованием препроцессора SCSS)
+- JavaScript
+- Fetch API для получения данных с сервера
+
+## Установка и запуск
+
+1. Склонируйте репозиторий на свой компьютер:
+
+2. Перейдите в папку проекта:
+
+3. Откройте файл `index.html` в вашем веб-браузере.
