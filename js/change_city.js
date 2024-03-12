@@ -2,6 +2,7 @@
 const floatOffer = document.querySelector(".header__offer-city");
 const modalBackground = document.querySelector(".background-modal");
 const changeCity = document.querySelector(".header__option-change");
+const confirmCity = document.querySelector(".header__option-checked");
 const cityOptionTable = document.querySelector(".cities-wrapper");
 const body = document.body;
 const currentCity = document.querySelector(".header__location-city");
@@ -45,3 +46,15 @@ cityOptionTable.onclick = function (event) {
   body.classList.remove("modal-open");
   currentCity.innerHTML = event.target.innerHTML;
 };
+
+confirmCity.addEventListener("click", () => {
+  floatOffer.classList.remove("visible");
+  modalBackground.classList.remove("visible");
+  body.classList.remove("modal-open");
+  //на скорую руку решение
+  floatOffer.style.display = "none";
+
+  modalBackground.style.display = "none";
+
+  body.classList.style.display = "none";
+});

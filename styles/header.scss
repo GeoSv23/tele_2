@@ -71,7 +71,7 @@ $secondaryColor: rgb(72, 204, 253);
   right: 20px;
   width: 320px;
   height: 130px;
-  background-color: $mainColor;
+  background-color: rgb(225 222 207 / 86%);
   color: black;
   border-radius: 10px;
   display: flex;
@@ -111,7 +111,7 @@ $secondaryColor: rgb(72, 204, 253);
   cursor: pointer;
   border: 1px solid;
   border-radius: 30px;
-  background-color: #d7ff38;
+  background-color: rgb(225 222 207 / 86%);
 }
 
 .visible {
