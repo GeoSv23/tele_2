@@ -1,10 +1,12 @@
+$green: #d7ff38;
+
 .toTop-wrapper {
   position: fixed;
   right: calc(50% - 40px);
   bottom: 100px;
   width: 80px;
   height: 80px;
-  background-color: #d7ff38;
+  background-color: $green;
   border-radius: 50%;
   padding: 20px;
   cursor: pointer;
