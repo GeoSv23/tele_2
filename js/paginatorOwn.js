@@ -1,5 +1,7 @@
 const slide1 = document.querySelector(".slide1");
 const slide2 = document.querySelector(".slide2");
+const userImg = document.createElement("div");
+const userDesc = document.createElement("p");
 
 getUsers();
 let userOwn;
@@ -21,10 +23,10 @@ function renderNewUsers(userOwn) {
     const newUser = document.createElement("div");
 
     newUser.classList.add("slider-user");
-    const userImg = document.createElement("div");
+    // const userImg = document.createElement("div");
     userImg.classList.add("user-img");
     userImg.innerHTML = `<img src="${user.avatar_url}" alt="${user.login}"> `;
-    const userDesc = document.createElement("p");
+    // const userDesc = document.createElement("p");
     userDesc.classList.add("user-desc");
     userDesc.innerHTML = `<p>${user.login}</p>`;
     newUser.appendChild(userImg);
