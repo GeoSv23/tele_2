@@ -3,9 +3,9 @@ $mainColor: rgb(255, 255, 255);
 $secondaryColor: rgb(72, 204, 253);
 $green: #d7ff38;
 
-.paginator-wrapper {
-  overflow: hidden;
-}
+// .paginator-wrapper {
+//   overflow: hidden;
+// }
 
 .paginator {
   display: flex;
@@ -20,14 +20,14 @@ $green: #d7ff38;
 }
 
 .paginator::-webkit-scrollbar {
-  height: 12px;
-  width: 12px;
+  height: 2px;
+  width: 0;
   background-color: transparent;
 }
 
 .paginator::-webkit-scrollbar-thumb {
   background-color: #d7ff38;
-  height: 12px;
+  height: 2px;
 }
 
 .slide1 {
