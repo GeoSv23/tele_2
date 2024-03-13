@@ -7,7 +7,7 @@ const cityOptionTable = document.querySelector(".cities-wrapper");
 const body = document.body;
 const currentCity = document.querySelector(".header__location-city");
 
-//Уточнение города через 2м.сек;
+//Уточнение города через 2м.сек.
 setTimeout(() => {
   floatOffer.classList.toggle("visible");
   modalBackground.classList.add("visible");
@@ -55,5 +55,5 @@ confirmCity.addEventListener("click", () => {
 
   modalBackground.style.display = "none";
 
-  body.style.display = "none";
+  body.classList.style.display = "none";
 });
