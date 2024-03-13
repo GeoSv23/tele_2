@@ -3,7 +3,7 @@ const cityOptionTable = document.querySelector(".cities-wrapper");
 const body = document.body;
 
 let savedCity = localStorage.getItem("city");
-currentCity.innerHTML = savedCity ?? "Moscow";
+currentCity.innerHTML = savedCity ?? "Москва";
 
 currentCity.addEventListener("click", () => {
   cityOptionTable.classList.add("visible");
