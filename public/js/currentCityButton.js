@@ -1,6 +1,9 @@
-const currentCity = document.querySelector(".header__location-city");
+let currentCity = document.querySelector(".header__location-city");
 const cityOptionTable = document.querySelector(".cities-wrapper");
 const body = document.body;
+
+let savedCity = localStorage.getItem("city");
+currentCity.innerHTML = savedCity ?? "Москва";
 
 currentCity.addEventListener("click", () => {
   cityOptionTable.classList.add("visible");
@@ -9,5 +12,9 @@ currentCity.addEventListener("click", () => {
 cityOptionTable.onclick = function (event) {
   cityOptionTable.classList.remove("visible");
   body.classList.remove("modal-open");
-  currentCity.innerHTML = event.target.innerHTML;
+  savedCity = event.target.innerHTML;
+  localStorage.setItem("city", savedCity);
+  currentCity.innerHTML = savedCity ?? "Moscow";
+
+  console.log(savedCity);
 };

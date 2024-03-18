@@ -57,6 +57,9 @@ $secondaryColor: rgb(72, 204, 253);
   align-items: center;
   position: relative;
 }
+.header__location-city {
+  font-size: 25px;
+}
 
 .location-icon {
   margin-right: 10px;
@@ -65,14 +68,14 @@ $secondaryColor: rgb(72, 204, 253);
 }
 
 .header__offer-city {
-  cursor: default;
+  cursor: pointer;
   position: absolute;
-  top: 80px;
-  right: 20px;
-  width: 320px;
-  height: 130px;
-  background-color: rgb(225 222 207 / 86%);
-  color: black;
+  top: 66px;
+  right: 0px;
+  width: 280px;
+  height: 158px;
+  background-color: white;
+  color: #000;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -100,6 +103,7 @@ $secondaryColor: rgb(72, 204, 253);
   font-size: 13px;
   margin: 10px;
   height: 40px;
+  border: 1px solid transparent;
   padding: 9px 19px 9px 19px;
 }
 .header__option.cheked {
@@ -152,12 +156,12 @@ $secondaryColor: rgb(72, 204, 253);
 
   .header__offer-city {
     position: absolute;
-    top: 100px;
-    right: 0;
+    top: 66px;
+    right: 0px;
     width: 330px;
-    height: 130px;
-    background-color: $mainColor;
-    color: black;
+    height: 158px;
+    background-color: white;
+    color: #000;
     border-radius: 10px;
     display: flex;
     flex-direction: column;

@@ -7,12 +7,6 @@ const cityOptionTable = document.querySelector(".cities-wrapper");
 const body = document.body;
 const currentCity = document.querySelector(".header__location-city");
 
-//закрыть модальное окно при нажатии не на парящее меню
-modalBackground.addEventListener("click", () => {
-  modalBackground.classList.remove("visible");
-  floatOffer.classList.remove("visible");
-  body.classList.remove("modal-open");
-});
 //Уточнение города через 2м.сек.
 setTimeout(() => {
   floatOffer.classList.toggle("visible");
@@ -32,7 +26,12 @@ changeCity.addEventListener("click", () => {
   body.classList.add("modal-open");
 });
 
-//выбор города в мод окне
+//закрыть модальное окно при нажатии не на парящее меню
+modalBackground.addEventListener("click", () => {
+  modalBackground.classList.remove("visible");
+  floatOffer.classList.remove("visible");
+  body.classList.remove("modal-open");
+});
 
 // убрать скролл когда открыта таблица городов
 currentCity.addEventListener("click", () => {

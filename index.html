@@ -31,8 +31,9 @@
         <input
           pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
           type="tel"
-          minlength="11"
-          maxlength="11"
+          minlength="20"
+          maxlength="20"
+          class="input-form"
           id="input-number-modal"
           placeholder="+7 (999) 692 06 09"
         />
@@ -71,7 +72,7 @@
           src="img/Location.png"
           alt="значок геолокации"
         />
-        <span class="header__location-city">Москва</span>
+        <span class="header__location-city"></span>
         <div class="header__offer-city">
           <img src="/img/Rectangle 225.svg" alt="" class="city-pointer" />
           <p class="header__offer-city-title">Ваш регион Москва?</p>
@@ -158,9 +159,10 @@
           <input
             pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
             type="tel"
-            minlength="11"
-            maxlength="11"
+            minlength="20"
+            maxlength="20"
             id="number"
+            class="input-form"
             placeholder="+7 (999) 692 06 09"
           />
           <div class="checkbox-container">
@@ -316,11 +318,11 @@
         <img src="img/arrow-up-337-svgrepo-com.svg" alt="" class="toTop-img" />
       </div>
     </footer>
-
+    <script type="module" src="/public/js/paginatorOwn.js"></script>
     <script type="module" src="/public/js/change_city.js"></script>
     <script type="module" src="/public/js/currentCityButton.js"></script>
     <script type="module" src="/public/js/takePart.js"></script>
     <script type="module" src="/public/js/scrollTop.js"></script>
-    <script type="module" src="/public/js/paginatorOwn.js"></script>
+    <script type="module" src="/public/js/phone_mask.js"></script>
   </body>
 </html>
